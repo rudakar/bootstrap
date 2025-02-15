@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Sitio - Inicio</title>
-  <!-- Bootstrap CSS -->
+  <title>Expedición a Rivendel - Inicio</title>
   <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
 <body>
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <!-- Logo y Título -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo Expedición a Rivendel" style="height:40px;" class="me-2">
+        <span class="animate__animated animate__bounce">Expedición a Rivendel</span>
+      </a>
       <button 
         class="navbar-toggler" 
         type="button" 
@@ -26,19 +33,46 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Menú principal -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Acerca de</a>
+            <a class="nav-link" href="about.html">Aventura</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="#">Consejos</a>
           </li>
         </ul>
+        <!-- Buscador -->
+        <form class="d-flex me-3" role="search">
+          <input 
+            class="form-control me-2" 
+            type="search" 
+            placeholder="Buscar en Rivendel" 
+            aria-label="Buscar"
+          >
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+        <!-- Selector de idioma -->
+        <div class="dropdown">
+          <button 
+            class="btn btn-outline-light dropdown-toggle" 
+            type="button" 
+            id="idiomaDropdown" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"
+          >
+            Idioma
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+            <li><a class="dropdown-item" href="#">Español</a></li>
+            <li><a class="dropdown-item" href="#">Inglés</a></li>
+            <li><a class="dropdown-item" href="#">Élfico</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -46,23 +80,56 @@
   <!-- Encabezado principal (Hero) -->
   <header class="bg-light text-dark py-5 text-center">
     <div class="container">
-      <h1 class="display-4">Bienvenido a Mi Sitio</h1>
-      <p class="lead">Crea páginas web rápidas y responsivas con Bootstrap</p>
-      <a href="about.html" class="btn btn-primary btn-lg">Saber más</a>
+      <h1 class="display-4">Bienvenido a la Expedición a Rivendel</h1>
+      <p class="lead">Embárcate en una aventura épica por la Tierra Media y descubre los caminos secretos hacia Rivendel.</p>
+      <a href="about.html" class="btn btn-primary btn-lg">Únete a la Aventura</a>
     </div>
   </header>
 
-  <!-- Sección de Características / Services -->
+  <!-- Carrusel de Imágenes -->
+  <section class="py-5 bg-secondary">
+    <div class="container">
+      <h2 class="text-center text-white mb-4">Rutas y Paisajes de la Tierra Media</h2>
+      <div id="carouselRivendel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselRivendel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Camino a Rivendel"></button>
+          <button type="button" data-bs-target="#carouselRivendel" data-bs-slide-to="1" aria-label="Bosques Encantados"></button>
+          <button type="button" data-bs-target="#carouselRivendel" data-bs-slide-to="2" aria-label="Montañas de la Tierra Media"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="tree1.webp" class="d-block w-100" alt="Camino a Rivendel">
+          </div>
+          <div class="carousel-item">
+            <img src="tree2.webp" class="d-block w-100" alt="Bosques Encantados">
+          </div>
+          <div class="carousel-item">
+            <img src="tree3.jpg" class="d-block w-100" alt="Montañas de la Tierra Media">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRivendel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselRivendel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Actividades de la Expedición -->
   <section class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Servicios Destacados</h2>
+      <h2 class="text-center mb-4">Experiencias en la Tierra Media</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 text-center">
             <div class="card-body">
-              <h5 class="card-title">Desarrollo Web</h5>
+              <h5 class="card-title">Ruta de la Aventura</h5>
               <p class="card-text">
-                Ofrecemos soluciones modernas y adaptadas a tus necesidades.
+                Descubre senderos olvidados y maravillas naturales en tu camino a Rivendel.
               </p>
             </div>
           </div>
@@ -70,9 +137,9 @@
         <div class="col-md-4">
           <div class="card h-100 text-center">
             <div class="card-body">
-              <h5 class="card-title">Diseño Responsivo ssd</h5>
+              <h5 class="card-title">Encuentro con elfos</h5>
               <p class="card-text">
-                Garantizamos una excelente visualización en todo tipo de dispositivos. euuu
+                Sumérgete en la cultura y magia de los elfos y vive encuentros inolvidables.
               </p>
             </div>
           </div>
@@ -80,9 +147,9 @@
         <div class="col-md-4">
           <div class="card h-100 text-center">
             <div class="card-body">
-              <h5 class="card-title">Consultoría asdasda</h5>
+              <h5 class="card-title">Campamento en la Naturaleza</h5>
               <p class="card-text">
-                Te asesoramos para que tu negocio tenga la mejor presencia en la web.
+                Descansa bajo las estrellas en un campamento digno de las leyendas de la Tierra Media.
               </p>
             </div>
           </div>
@@ -91,11 +158,152 @@
     </div>
   </section>
 
+  <!-- Sección del Mapa -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Ruta hacia Rivendel</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <!-- Mapa de Google Maps embebido (ruta simbólica) -->
+          <div class="ratio ratio-16x9">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12262.799056033236!2d-1.6453700999999998!3d42.796097849999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50927db8a5d33b%3A0xa3b3f8b27cb5e2b7!2sUniversidad%20P%C3%BAblica%20de%20Navarra!5e0!3m2!1ses!2ses!4v1708000000000" 
+              style="border:0;" 
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
- sadasdas
-  <!-- Bootstrap JS + Popper.js -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <!-- Bloque con Pestañas y Acordeones -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Secretos de la Tierra Media</h2>
+      <div class="row">
+        <!-- Pestañas (Tabs) -->
+        <div class="col-md-6">
+          <ul class="nav nav-tabs" id="tabSecretos" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="legado-tab" data-bs-toggle="tab" data-bs-target="#legado" type="button" role="tab" aria-controls="legado" aria-selected="true">
+                El Legado de Rivendel
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="historias-tab" data-bs-toggle="tab" data-bs-target="#historias" type="button" role="tab" aria-controls="historias" aria-selected="false">
+                Historias del Camino
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="consejos-tab" data-bs-toggle="tab" data-bs-target="#consejos" type="button" role="tab" aria-controls="consejos" aria-selected="false">
+                Consejos de Aventura
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content pt-3" id="tabSecretosContent">
+            <div class="tab-pane fade show active" id="legado" role="tabpanel" aria-labelledby="legado-tab">
+              Descubre la sabiduría ancestral y las leyendas que han forjado la historia de Rivendel.
+            </div>
+            <div class="tab-pane fade" id="historias" role="tabpanel" aria-labelledby="historias-tab">
+              Escucha relatos épicos de viajeros y héroes que han recorrido los senderos de la Tierra Media.
+            </div>
+            <div class="tab-pane fade" id="consejos" role="tabpanel" aria-labelledby="consejos-tab">
+              Recibe valiosos consejos para prepararte y vivir una expedición segura y mágica.
+            </div>
+          </div>
+        </div>
+        <!-- Acordeón -->
+        <div class="col-md-6">
+          <div class="accordion" id="accordionSecretos">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingMitos">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMitos" aria-expanded="true" aria-controls="collapseMitos">
+                  Mitos y Leyendas
+                </button>
+              </h2>
+              <div id="collapseMitos" class="accordion-collapse collapse show" aria-labelledby="headingMitos" data-bs-parent="#accordionSecretos">
+                <div class="accordion-body">
+                  Sumérgete en las historias que han inspirado a generaciones en la Tierra Media.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingPreparativos">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePreparativos" aria-expanded="false" aria-controls="collapsePreparativos">
+                  Preparativos para la Aventura
+                </button>
+              </h2>
+              <div id="collapsePreparativos" class="accordion-collapse collapse" aria-labelledby="headingPreparativos" data-bs-parent="#accordionSecretos">
+                <div class="accordion-body">
+                  Conoce todo lo necesario para equiparte y enfrentar los desafíos en tu camino a Rivendel.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingRecomendaciones">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecomendaciones" aria-expanded="false" aria-controls="collapseRecomendaciones">
+                  Recomendaciones de los Elfos
+                </button>
+              </h2>
+              <div id="collapseRecomendaciones" class="accordion-collapse collapse" aria-labelledby="headingRecomendaciones" data-bs-parent="#accordionSecretos">
+                <div class="accordion-body">
+                  Los elfos comparten sus secretos para disfrutar plenamente de la naturaleza y la magia de la Tierra Media.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer con 3 bloques responsives y formulario de login -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Bloque 1: Sobre la Expedición -->
+        <div class="col-md-4 mb-4">
+          <h5>Sobre la Expedición</h5>
+          <p>
+            Únete a una aventura mágica a través de la Tierra Media. Descubre los secretos de Rivendel y vive una experiencia inolvidable en cada paso del camino.
+          </p>
+        </div>
+        <!-- Bloque 2: Enlaces Útiles -->
+        <div class="col-md-4 mb-4">
+          <h5>Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">Aventura</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Galería</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Consejos</a></li>
+          </ul>
+        </div>
+        <!-- Bloque 3: Login de la Hermandad -->
+        <div class="col-md-4 mb-4">
+          <h5>Acceso a la Hermandad</h5>
+          <form>
+            <div class="mb-3">
+              <label for="usuario" class="form-label">Nombre de usuario</label>
+              <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="contraseña" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <small>&copy; 2025 Expedición a Rivendel. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
